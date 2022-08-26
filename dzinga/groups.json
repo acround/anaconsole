@@ -1,0 +1,700 @@
+{
+    "list": [
+        {
+            "id": "1",
+            "customer_login": "a.grzelak@centrumkas.pl",
+            "group_capi2_id": "5408",
+            "group_porta_id": "58986"
+        },
+        {
+            "id": "3",
+            "customer_login": "a.grzelak@centrumkas.pl",
+            "group_capi2_id": "5409",
+            "group_porta_id": "58987"
+        },
+        {
+            "id": "5",
+            "customer_login": "a.grzelak@centrumkas.pl",
+            "group_capi2_id": "5451",
+            "group_porta_id": "59192"
+        },
+        {
+            "id": "7",
+            "customer_login": "a.grzelak@centrumkas.pl",
+            "group_capi2_id": "6269",
+            "group_porta_id": "66971"
+        },
+        {
+            "id": "9",
+            "customer_login": "andres@opennodecloud.com",
+            "group_capi2_id": "5374",
+            "group_porta_id": "58942"
+        },
+        {
+            "id": "11",
+            "customer_login": "annazhanna100@gmail.com",
+            "group_capi2_id": "6200",
+            "group_porta_id": "66397"
+        },
+        {
+            "id": "13",
+            "customer_login": "bartekmalinowski13@gmail.com",
+            "group_capi2_id": "5950",
+            "group_porta_id": "65336"
+        },
+        {
+            "id": "15",
+            "customer_login": "benjamin.berenyi@pentech.hu",
+            "group_capi2_id": "5598",
+            "group_porta_id": "64268"
+        },
+        {
+            "id": "17",
+            "customer_login": "biuro@dot24.eu",
+            "group_capi2_id": "5427",
+            "group_porta_id": "59068"
+        },
+        {
+            "id": "19",
+            "customer_login": "biuro@ekologicznadrogeriakrakow.pl",
+            "group_capi2_id": "6153",
+            "group_porta_id": "66040"
+        },
+        {
+            "id": "21",
+            "customer_login": "blubkowski@dobryhotel.com",
+            "group_capi2_id": "5613",
+            "group_porta_id": "64575"
+        },
+        {
+            "id": "23",
+            "customer_login": "blubkowski@dobryhotel.com",
+            "group_capi2_id": "5624",
+            "group_porta_id": "64690"
+        },
+        {
+            "id": "25",
+            "customer_login": "blubkowski@dobryhotel.com",
+            "group_capi2_id": "5625",
+            "group_porta_id": "64691"
+        },
+        {
+            "id": "27",
+            "customer_login": "contact@ecom.ngo",
+            "group_capi2_id": "6138",
+            "group_porta_id": "65866"
+        },
+        {
+            "id": "29",
+            "customer_login": "denar.biuro@poczta.fm",
+            "group_capi2_id": "5608",
+            "group_porta_id": "64439"
+        },
+        {
+            "id": "31",
+            "customer_login": "filip.dosek@seznam.cz",
+            "group_capi2_id": "6203",
+            "group_porta_id": "66466"
+        },
+        {
+            "id": "33",
+            "customer_login": "filip.dosek@seznam.cz",
+            "group_capi2_id": "6204",
+            "group_porta_id": "66467"
+        },
+        {
+            "id": "35",
+            "customer_login": "fundacja@savant.org.pl",
+            "group_capi2_id": "5579",
+            "group_porta_id": "64183"
+        },
+        {
+            "id": "37",
+            "customer_login": "hueseyin@billwerk.com",
+            "group_capi2_id": "6227",
+            "group_porta_id": "66748"
+        },
+        {
+            "id": "39",
+            "customer_login": "hwdpacab999@gmail.com",
+            "group_capi2_id": "5331",
+            "group_porta_id": "58899"
+        },
+        {
+            "id": "41",
+            "customer_login": "ilfatd@gmail.com",
+            "group_capi2_id": "5089",
+            "group_porta_id": "58478"
+        },
+        {
+            "id": "43",
+            "customer_login": "ilfatd@gmail.com",
+            "group_capi2_id": "5090",
+            "group_porta_id": "58479"
+        },
+        {
+            "id": "45",
+            "customer_login": "info@dreamtours.pl",
+            "group_capi2_id": "5439",
+            "group_porta_id": "59083"
+        },
+        {
+            "id": "47",
+            "customer_login": "info@nitrus.lt",
+            "group_capi2_id": "5339",
+            "group_porta_id": "58908"
+        },
+        {
+            "id": "49",
+            "customer_login": "info@westeuropeinternational.com",
+            "group_capi2_id": "5392",
+            "group_porta_id": "58956"
+        },
+        {
+            "id": "51",
+            "customer_login": "IShmarkova_test162@mtt.ru",
+            "group_capi2_id": "5643",
+            "group_porta_id": "64786"
+        },
+        {
+            "id": "53",
+            "customer_login": "IShmarkova_test162@mtt.ru",
+            "group_capi2_id": "6180",
+            "group_porta_id": "66274"
+        },
+        {
+            "id": "55",
+            "customer_login": "IShmarkova_test162@mtt.ru",
+            "group_capi2_id": "6181",
+            "group_porta_id": "66275"
+        },
+        {
+            "id": "57",
+            "customer_login": "IShmarkova_test175@mtt.ru",
+            "group_capi2_id": "6068",
+            "group_porta_id": "65599"
+        },
+        {
+            "id": "59",
+            "customer_login": "IShmarkova_test175@mtt.ru",
+            "group_capi2_id": "6069",
+            "group_porta_id": "65600"
+        },
+        {
+            "id": "61",
+            "customer_login": "IShmarkova_test175@mtt.ru",
+            "group_capi2_id": "6109",
+            "group_porta_id": "65690"
+        },
+        {
+            "id": "63",
+            "customer_login": "IShmarkova_test194@mtt.ru",
+            "group_capi2_id": "6084",
+            "group_porta_id": "65632"
+        },
+        {
+            "id": "65",
+            "customer_login": "IShmarkova_test194@mtt.ru",
+            "group_capi2_id": "6085",
+            "group_porta_id": "65633"
+        },
+        {
+            "id": "67",
+            "customer_login": "IShmarkova_test194@mtt.ru",
+            "group_capi2_id": "6086",
+            "group_porta_id": "65634"
+        },
+        {
+            "id": "69",
+            "customer_login": "IShmarkova_test194@mtt.ru",
+            "group_capi2_id": "6125",
+            "group_porta_id": "65757"
+        },
+        {
+            "id": "71",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5259",
+            "group_porta_id": "58818"
+        },
+        {
+            "id": "73",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5260",
+            "group_porta_id": "58819"
+        },
+        {
+            "id": "75",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5261",
+            "group_porta_id": "58820"
+        },
+        {
+            "id": "77",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5262",
+            "group_porta_id": "58821"
+        },
+        {
+            "id": "79",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5264",
+            "group_porta_id": "58829"
+        },
+        {
+            "id": "81",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5265",
+            "group_porta_id": "58830"
+        },
+        {
+            "id": "83",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5266",
+            "group_porta_id": "58831"
+        },
+        {
+            "id": "85",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5267",
+            "group_porta_id": "58832"
+        },
+        {
+            "id": "87",
+            "customer_login": "IShmarkova_test225@mtt.ru",
+            "group_capi2_id": "5268",
+            "group_porta_id": "58833"
+        },
+        {
+            "id": "89",
+            "customer_login": "IShmarkova_test228@mtt.ru",
+            "group_capi2_id": "5281",
+            "group_porta_id": "58846"
+        },
+        {
+            "id": "91",
+            "customer_login": "IShmarkova_test228@mtt.ru",
+            "group_capi2_id": "5282",
+            "group_porta_id": "58847"
+        },
+        {
+            "id": "93",
+            "customer_login": "IShmarkova_test228@mtt.ru",
+            "group_capi2_id": "5283",
+            "group_porta_id": "58848"
+        },
+        {
+            "id": "95",
+            "customer_login": "IShmarkova_test228@mtt.ru",
+            "group_capi2_id": "5284",
+            "group_porta_id": "58849"
+        },
+        {
+            "id": "97",
+            "customer_login": "IShmarkova_test231@mtt.ru",
+            "group_capi2_id": "5306",
+            "group_porta_id": "58872"
+        },
+        {
+            "id": "99",
+            "customer_login": "IShmarkova_test231@mtt.ru",
+            "group_capi2_id": "5307",
+            "group_porta_id": "58873"
+        },
+        {
+            "id": "101",
+            "customer_login": "IShmarkova_test231@mtt.ru",
+            "group_capi2_id": "5308",
+            "group_porta_id": "58874"
+        },
+        {
+            "id": "103",
+            "customer_login": "IShmarkova_test231@mtt.ru",
+            "group_capi2_id": "5309",
+            "group_porta_id": "58875"
+        },
+        {
+            "id": "105",
+            "customer_login": "IShmarkova_test232@mtt.ru",
+            "group_capi2_id": "5314",
+            "group_porta_id": "58880"
+        },
+        {
+            "id": "107",
+            "customer_login": "IShmarkova_test232@mtt.ru",
+            "group_capi2_id": "5315",
+            "group_porta_id": "58881"
+        },
+        {
+            "id": "109",
+            "customer_login": "IShmarkova_test232@mtt.ru",
+            "group_capi2_id": "5316",
+            "group_porta_id": "58882"
+        },
+        {
+            "id": "111",
+            "customer_login": "IShmarkova_test232@mtt.ru",
+            "group_capi2_id": "5317",
+            "group_porta_id": "58883"
+        },
+        {
+            "id": "113",
+            "customer_login": "IShmarkova_test233@mtt.ru",
+            "group_capi2_id": "5323",
+            "group_porta_id": "58891"
+        },
+        {
+            "id": "115",
+            "customer_login": "IShmarkova_test233@mtt.ru",
+            "group_capi2_id": "5324",
+            "group_porta_id": "58892"
+        },
+        {
+            "id": "117",
+            "customer_login": "IShmarkova_test233@mtt.ru",
+            "group_capi2_id": "5325",
+            "group_porta_id": "58893"
+        },
+        {
+            "id": "119",
+            "customer_login": "IShmarkova_test233@mtt.ru",
+            "group_capi2_id": "5326",
+            "group_porta_id": "58894"
+        },
+        {
+            "id": "121",
+            "customer_login": "IShmarkova_test234@mtt.ru",
+            "group_capi2_id": "5327",
+            "group_porta_id": "58895"
+        },
+        {
+            "id": "123",
+            "customer_login": "IShmarkova_test234@mtt.ru",
+            "group_capi2_id": "5328",
+            "group_porta_id": "58896"
+        },
+        {
+            "id": "125",
+            "customer_login": "IShmarkova_test234@mtt.ru",
+            "group_capi2_id": "5329",
+            "group_porta_id": "58897"
+        },
+        {
+            "id": "127",
+            "customer_login": "IShmarkova_test234@mtt.ru",
+            "group_capi2_id": "5330",
+            "group_porta_id": "58898"
+        },
+        {
+            "id": "129",
+            "customer_login": "IShmarkova_test234@mtt.ru",
+            "group_capi2_id": "5332",
+            "group_porta_id": "58900"
+        },
+        {
+            "id": "131",
+            "customer_login": "IShmarkova_test245@mtt.ru",
+            "group_capi2_id": "5366",
+            "group_porta_id": "58934"
+        },
+        {
+            "id": "133",
+            "customer_login": "IShmarkova_test245@mtt.ru",
+            "group_capi2_id": "5367",
+            "group_porta_id": "58935"
+        },
+        {
+            "id": "135",
+            "customer_login": "IShmarkova_test245@mtt.ru",
+            "group_capi2_id": "5368",
+            "group_porta_id": "58936"
+        },
+        {
+            "id": "137",
+            "customer_login": "IShmarkova_test245@mtt.ru",
+            "group_capi2_id": "5369",
+            "group_porta_id": "58937"
+        },
+        {
+            "id": "139",
+            "customer_login": "it@accipo.pl",
+            "group_capi2_id": "5389",
+            "group_porta_id": "58953"
+        },
+        {
+            "id": "141",
+            "customer_login": "it@accipo.pl",
+            "group_capi2_id": "5391",
+            "group_porta_id": "58955"
+        },
+        {
+            "id": "143",
+            "customer_login": "joannak.lewandowska@gmail.com",
+            "group_capi2_id": "6090",
+            "group_porta_id": "65654"
+        },
+        {
+            "id": "145",
+            "customer_login": "kontodlatestow123@gmail.com",
+            "group_capi2_id": "6226",
+            "group_porta_id": "66747"
+        },
+        {
+            "id": "147",
+            "customer_login": "kubsubpl@gmail.com",
+            "group_capi2_id": "6205",
+            "group_porta_id": "66471"
+        },
+        {
+            "id": "149",
+            "customer_login": "kubsubpl@gmail.com",
+            "group_capi2_id": "6206",
+            "group_porta_id": "66473"
+        },
+        {
+            "id": "151",
+            "customer_login": "kzeman@dtpzeman.cz",
+            "group_capi2_id": "5287",
+            "group_porta_id": "58853"
+        },
+        {
+            "id": "153",
+            "customer_login": "l.smolen@maldrew.com.pl",
+            "group_capi2_id": "5390",
+            "group_porta_id": "58954"
+        },
+        {
+            "id": "155",
+            "customer_login": "marketing@nonsense.tech",
+            "group_capi2_id": "5609",
+            "group_porta_id": "64453"
+        },
+        {
+            "id": "157",
+            "customer_login": "markspasonov@gmail.com",
+            "group_capi2_id": "6031",
+            "group_porta_id": "65454"
+        },
+        {
+            "id": "159",
+            "customer_login": "mateusz@podpierzyna.pl",
+            "group_capi2_id": "5418",
+            "group_porta_id": "59050"
+        },
+        {
+            "id": "161",
+            "customer_login": "merchant.biuromca@wp.pl",
+            "group_capi2_id": "5380",
+            "group_porta_id": "58944"
+        },
+        {
+            "id": "163",
+            "customer_login": "metin@allnybygg.com",
+            "group_capi2_id": "6207",
+            "group_porta_id": "66566"
+        },
+        {
+            "id": "165",
+            "customer_login": "nedorostek@email.cz",
+            "group_capi2_id": "5636",
+            "group_porta_id": "64762"
+        },
+        {
+            "id": "167",
+            "customer_login": "office.msk@dzinga.com",
+            "group_capi2_id": "6046",
+            "group_porta_id": "65483"
+        },
+        {
+            "id": "169",
+            "customer_login": "pjerzmanowski@wp.pl",
+            "group_capi2_id": "5927",
+            "group_porta_id": "65297"
+        },
+        {
+            "id": "171",
+            "customer_login": "pjerzmanowski@wp.pl",
+            "group_capi2_id": "5928",
+            "group_porta_id": "65298"
+        },
+        {
+            "id": "173",
+            "customer_login": "pjerzmanowski@wp.pl",
+            "group_capi2_id": "5929",
+            "group_porta_id": "65299"
+        },
+        {
+            "id": "175",
+            "customer_login": "pjerzmanowski@wp.pl",
+            "group_capi2_id": "5930",
+            "group_porta_id": "65300"
+        },
+        {
+            "id": "177",
+            "customer_login": "poczta@sprzedajemylampy.pl",
+            "group_capi2_id": "5446",
+            "group_porta_id": "59128"
+        },
+        {
+            "id": "179",
+            "customer_login": "riga9999@gmail.com",
+            "group_capi2_id": "5355",
+            "group_porta_id": "58924"
+        },
+        {
+            "id": "181",
+            "customer_login": "riga9999@gmail.com",
+            "group_capi2_id": "5356",
+            "group_porta_id": "58925"
+        },
+        {
+            "id": "183",
+            "customer_login": "riga9999@gmail.com",
+            "group_capi2_id": "5357",
+            "group_porta_id": "58926"
+        },
+        {
+            "id": "185",
+            "customer_login": "rost@higs.eu",
+            "group_capi2_id": "6175",
+            "group_porta_id": "66229"
+        },
+        {
+            "id": "187",
+            "customer_login": "sergey.p@offshorelicense.com",
+            "group_capi2_id": "5603",
+            "group_porta_id": "64337"
+        },
+        {
+            "id": "189",
+            "customer_login": "sergey.p@offshorelicense.com",
+            "group_capi2_id": "5604",
+            "group_porta_id": "64338"
+        },
+        {
+            "id": "191",
+            "customer_login": "sergey.p@offshorelicense.com",
+            "group_capi2_id": "5605",
+            "group_porta_id": "64339"
+        },
+        {
+            "id": "193",
+            "customer_login": "sklep@motomatic.pl",
+            "group_capi2_id": "5371",
+            "group_porta_id": "58939"
+        },
+        {
+            "id": "195",
+            "customer_login": "stepniak@thgeyer.pl",
+            "group_capi2_id": "5094",
+            "group_porta_id": "58483"
+        },
+        {
+            "id": "197",
+            "customer_login": "support@fastinvest.com",
+            "group_capi2_id": "5595",
+            "group_porta_id": "64237"
+        },
+        {
+            "id": "199",
+            "customer_login": "tavo.tv@mail.ru",
+            "group_capi2_id": "5092",
+            "group_porta_id": "58481"
+        },
+        {
+            "id": "201",
+            "customer_login": "tel@dzingafonica.com",
+            "group_capi2_id": "6066",
+            "group_porta_id": "65594"
+        },
+        {
+            "id": "203",
+            "customer_login": "tel@dzingafonica.com",
+            "group_capi2_id": "6067",
+            "group_porta_id": "65595"
+        },
+        {
+            "id": "205",
+            "customer_login": "test_addressbook_prod_15@dz.com",
+            "group_capi2_id": "6259",
+            "group_porta_id": "66840"
+        },
+        {
+            "id": "207",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5434",
+            "group_porta_id": "59078"
+        },
+        {
+            "id": "209",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5436",
+            "group_porta_id": "59080"
+        },
+        {
+            "id": "211",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5437",
+            "group_porta_id": "59081"
+        },
+        {
+            "id": "213",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5438",
+            "group_porta_id": "59082"
+        },
+        {
+            "id": "215",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5442",
+            "group_porta_id": "59084"
+        },
+        {
+            "id": "217",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5443",
+            "group_porta_id": "59085"
+        },
+        {
+            "id": "219",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5462",
+            "group_porta_id": "59332"
+        },
+        {
+            "id": "221",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5491",
+            "group_porta_id": "62006"
+        },
+        {
+            "id": "223",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5499",
+            "group_porta_id": "62027"
+        },
+        {
+            "id": "225",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5751",
+            "group_porta_id": "64970"
+        },
+        {
+            "id": "227",
+            "customer_login": "tomasz.siejka@unitrailer.eu",
+            "group_capi2_id": "5862",
+            "group_porta_id": "65202"
+        },
+        {
+            "id": "229",
+            "customer_login": "yakyshyn@softprom.com",
+            "group_capi2_id": "6225",
+            "group_porta_id": "66742"
+        },
+        {
+            "id": "231",
+            "customer_login": "zoho_test_dzinga1@dz.com",
+            "group_capi2_id": "6166",
+            "group_porta_id": "66088"
+        }
+    ]
+}

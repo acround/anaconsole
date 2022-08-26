@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <meta http-equiv='content-type' content='text/html; charset=koi8-r'>
+        <title>
+            Any2FB2 - программа для преобразования текста/HTML в формат FictionBook (fb2)
+        </title>
+    </head>
+    <body>
+
+        <hr/>
+        <h1>Содержание</h1>
+        <hr/>
+
+        <ul>
+            <li><a href="#common">Общая информация</a></li>
+            <li><a href="#install">Установка</a></li>
+            <li><a href="#console">Использование консольного конвертора</a></li>
+            <li><a href="#web">Настройка, использование WEB-конвертора и интеграция с Apache</a></li>
+            <li><a href="#libru">Интеграция с зеркалом lib.ru</a></li>
+        </ul>
+
+        <hr/>
+        <h1><a name="common">Общая информация</a></h1>
+        <hr/>
+
+        <p>
+            Эта программа - переписанная на PHP Delphi-программа
+            <a href="http://www.gribuser.ru/">Any2FB2</a> Дмитрия Грибова.
+            Большое спасибо ему за позволение использовать его код и алгоритмы.
+        </p>
+
+        <p>
+            Основная цель, которую я перед собой ставил, занимаясь этой работой -
+            получить программу, работающую под Linux'ом
+            (но по возможности платформенно-независимую),
+            которую я смог бы подключить к своему локальному зеркалу
+            библиотеки <a href='http://lib.ru'>Lib.ru</a> и своей
+            локальной копилке HTML-документации и получать читаемый на КПК fb2-файл,
+            не пользуясь другими ОС.
+            Кроме того, я хотел пользоваться минимумом сторонних библиотек, обходясь
+            стандартными возможностями языка (отсюда PHP, а не Perl или что-то другое).
+        </p>
+
+        <p>
+            Попутно я несколько улучшил оригинал, в результате чего конвертор не падает
+            на файлах, которые оказываются не по зубам оригиналу.
+            Определённые недостатки, конечно, появились - несколько меньшая скорость
+            работы, кое-где её можно было бы увеличить, но задачу перегнать оригинал
+            по скорости я не ставил, а текущее положение дел меня вполне устраивает.
+        </p>
+
+        <p>
+            Итак, в результате у меня получилось следующее:
+        <ul>
+            <li>
+                Консольный конвертор, могущий всё, что может оригинал плюс ещё немного.
+            </li>
+            <li>
+                HTTP-конвертор, подключаемый к любому WEB-серверу,
+                умеющему запускать PHP (у меня он работает на
+                <a href='http://www.apache.org'>Apache</a> и
+                <a href='http://www.aprelium.com'>Abyss</a>)
+            </li>
+            <li>
+                Вызов конвертора в FictionBook при выборе соответствующего пукта
+                в меню формата зеркала lib.ru
+            </li>
+            <li>
+                Замена автоматическому directory listing'у Apache'а
+                (для нескольких директорий своей документации).
+            </li>
+            <li>
+                Возможность относительно просто писать дополнительные frontend'ы.
+            </li>
+        </ul>
+    </p>
+
+    <p>
+        Если будут какие-то вопросы и/или пожелания - буду рад обсудить.
+        <br>
+        Мои контакты:
+    <ul>
+        <li>JID: eliterr@jabber.ru</li>
+        <li>ICQ UIN: 84714386</li>
+        <li>Email: eliterr@ngs.ru</li>
+    </ul>
+</p>
+
+<p>
+    Данный продукт распростаняется под лицензией
+    <a href="http://www.fsf.org/licenses/licenses.html">GNU GPL</a>
+    версии 2 или более поздней.
+</p>
+
+<hr>
+<h1><a name="install">Установка</a></h1>
+<hr/>
+
+<p>
+    В общем-то всё, что нужно - это <a href='http://www.php.net'>PHP</a> версии
+    не ниже 4.3.4.
+</p>
+
+<p>
+    Крайне желательно наличие расширения gd или gd2 с поддержкой GIF,
+    иначе преобразование gif-&gt;png будет очень медленным.
+    Кроме того, для предпросмотра получившигося FictionBook-файла в виде HTML
+    (WEB-конвертер) необходимо будет расширение xslt.
+    С расширениями PHP в *NIX-ах здесь проблем не должно быть, а под Windows
+    минимального комплекта не хватит, понадобится полный PHP4 (~7&nbsp;MB)
+    и установка dll-файлов, которая, впрочем, описана в install.txt.
+</p>
+
+<p>
+    Для запуска консольного конвертора в *NIX'ах возможно, придётся подправить
+    первую строчку файла any2fb2 (путь и имя PHP-интерпретатора
+    с интерфейсом CGI или CLI),
+    а в Windows - добавить php.exe как обработчик .php-файлов.
+</p>
+
+
+<hr>
+<h1><a name="console">Использование консольного конвертора</a></h1>
+<hr/>
+
+<p>
+    Для работы консольному конвертору (any2fb2) необходим файл tx2fb.php
+    (ядро конвертора) и,
+    при отсутствии расширения gd.so (php_gd2.dll) с поддержкой gif,
+    файл gif.php. Путь к ним указывается в переменной <b>$progdir</b>.
+</p>
+
+<p>
+    <u>Вызов:</u><br/>
+    any2fb &lt;arguments&gt; &lt;input_file_or_url&gt;
+</p>
+
+<p>
+    <u>Аргументы:</u><br/>
+<dl>
+    <dt>-z или --zip</dt>
+    <dd>Сохранять в виде zip-архива, состоящего из одного файла
+        (не на стандартный выход).
+    </dd>
+
+    <dt>-f или --force</dt>
+    <dd>Позволять вывод zip-архива на стандартный выход.</dd>
+
+    <dt>-o &lt;filename&gt; или --output &lt;filename&gt;</dt>
+    <dd>Записывать результат в указанный файл.</dd>
+
+    <dt>-h или --help</dt>
+    <dd>Справка по синтаксису.</dd>
+
+    <dt>-l или --list</dt>
+    <dd>Показать список параметров конвертора.<br/>
+        Целые пареметры показываются просто числом,
+        логические - числом с пометкой true или false,
+        строки - значением в кавычках,
+        массивы строк - квадратными скобками, если значений нет или списком строк,
+        если значения есть.
+    </dd>
+
+    <dt>-p &lt;parameter&gt; &lt;value&gt; или --parameter &lt;parameter&gt; &lt;value&gt;</dt>
+    <dd>Присвоить параметру &lt;parameter&gt; значение &lt;value&gt;.
+        При этом заданное имя параметра сравнивается с существующими именами
+        без учёта регистра и символов подчёркивания, т.е.
+        Do_Not_Check_XML, DoNot_CheckXML и donotcheckxml - имена одного параметра.<br/>
+        Логическим параметрам необходимо присваивать число 0 или 1,
+        целым - целое число,
+        строковым - произвольную строку,
+        спискам строк - произвольное количество строк,
+        повторяя присваивание параметра несколько раз.
+    </dd>
+
+    <dt>-v или --verbose</dt>
+    <dd>Показывать прогресс более детально
+        (печатать точки, указывающие прогресс каждой операции в процентах).
+    </dd>
+
+    <dt>-q или --quiet</dt>
+    <dd>Не печатать вообще ничего в процессе преобразования.</dd>
+</dl>
+</p>
+
+
+<hr>
+<h1><a name=web>Настройка, использование WEB-конвертора и интеграция с Apache</a></h1>
+<hr/>
+
+<p>
+    Основная работа производилась мной на Debian GNU/linux Sid 2004-12-11
+    с WEB-сервером Apache 1.3.33, примеры будут для него же.
+</p>
+
+<p>
+    Для работы конвертору (index.php) необходим файл tx2fb.php (ядро конвертора)
+    и, при отсутствии расширения gd.so (php_gd2.dll) с поддержкой gif,
+    файл gif.php. Путь к ним указывается в переменной <b>$progdir</b>.
+</p>
+
+<p>
+    Для кэша (хранения готовых fb2-файлов) используется директория <b>$cachedir</b>,
+    которая, конечно, должна быть доступна WEB-серверу на запись/чтение/поиск.
+    <br/>
+    Кэш ограничивается переменными <b>$cachetimeout</b>
+    (при вызове конвертора все готовые файлы, которые созданы более чем
+    <b>$cachetimeout</b> секунд назад, удаляются)
+    и <b>$fileslimit</b> (если оставшихся файлов в кэше больше чем <b>$fileslimit</b>,
+    преобразование следующих файлов будет запрещено).
+</p>
+
+<p>
+    Имя файла, с которого конвертор должен начинать преобразование,
+    передаётся методом GET в переменной, указываемой ключом массива
+    <b>$libdirs</b>, элементы которого имеют вид
+    &lt;переменная&gt;&nbsp;=&gt;&nbsp;&lt;корневая&nbsp;директория&gt;.
+    При этом имя файла может быть как относительным (относительно корневой директории,
+    соответствующей этой переменной, так и полным, при этом начало полного
+    пути должно совпадать с корневой директорией.
+    <br/>
+    Аналогичный массив есть и в файле dirlist.php (см. ниже).
+</p>
+
+<p>
+    Для автоматического получения ссылок на файлы с расширениями htm, html и txt
+    в интересующих меня директориях я испольщовал dirlist.php,
+    который повторяет стандартный автоиндексатор Apache'а, но не показывает
+    readme для директорий и description для файлов, но дайт ссылки на конвертор.
+    <br/>
+    dirlist.php предполагает, что WEB-конфертер находится по адресу /Any2FB2/index.php,
+    если это не так, нужно будет поправить.
+    Подключал я его следующим образом (файл /etc/apache/conf.d/any2fb2.conf):
+<pre>
+  <font color="#8080ff"><b>Alias</b></font> /Any2FB2 /usr/local/lib/Any2FB2
+
+  <font color="#ff6060">&lt;Location</font><font color="#ff40ff"><b> /doc</b></font><font color="#ff6060">&gt;</font>
+  <font color="#ff6060">&lt;IfModule</font><font color="#ff40ff"><b> mod_dir.c</b></font><font color="#ff6060">&gt;</font>
+    <font color="#8080ff"><b>DirectoryIndex</b></font> index.html index.htm index.shtml index.cgi index.php /Any2FB2/dirlist.php
+  <font color="#ff6060">&lt;/IfModule&gt;</font>
+  <font color="#ff6060">&lt;/Location&gt;</font>
+
+  <font color="#ff6060">&lt;Location</font><font color="#ff40ff"><b> /debiandoc</b></font><font color="#ff6060">&gt;</font>
+  <font color="#ff6060">&lt;IfModule</font><font color="#ff40ff"><b> mod_dir.c</b></font><font color="#ff6060">&gt;</font>
+    <font color="#8080ff"><b>DirectoryIndex</b></font> index.html index.htm index.shtml index.cgi index.php /Any2FB2/dirlist.php
+  <font color="#ff6060">&lt;/IfModule&gt;</font>
+  <font color="#ff6060">&lt;/Location&gt;</font>
+</pre>
+<br/>
+</u>
+
+
+<hr>
+<h1><a name=libru>Интеграция с зеркалом lib.ru</a></h1>
+<hr/>
+
+<p>
+    В качестве основного скрипта у меня используется ~moshkow/public_html/bin/koi,
+    который является симлинком на ~moshkow/public_html/bin/html-KOI.pl.
+    На примере его я и буду показывать, что делал для того, чтобы ссылка
+    на WEB-конвертор появилась в списке фозможных форматов lib.ru.
+</p>
+
+<ol>
+    <li>
+        Добавляем обработчик постфикса.<br>
+        Было:
+        <pre>
+    <font color="#ff6060">if</font> (<font color="#ff6060">/</font><font color="#ff40ff"><b>_Contents$</b></font><font color="#ff6060">/</font>)              { <font color="#8080ff"><b>&amp;Contents</b></font>      ; }
+    <font color="#ff6060">if</font> (<font color="#ff6060">/</font><font color="#ff40ff"><b>_Ascii</b></font><font color="#ff40ff"><b>\.</b></font><font color="#ff40ff"><b>txt$</b></font><font color="#ff6060">/</font>)            { <font color="#8080ff"><b>&amp;Ascii</b></font>         ; }
+        </pre>
+        Стало:
+        <pre>
+    <font color="#ff6060">if</font> (<font color="#ff6060">/</font><font color="#ff40ff"><b>_Contents$</b></font><font color="#ff6060">/</font>)              { <font color="#8080ff"><b>&amp;Contents</b></font>      ; }
+    <font color="#ff6060">if</font> (<font color="#ff6060">/</font><font color="#ff40ff"><b>_fb2$</b></font><font color="#ff6060">/</font>)                   { <font color="#8080ff"><b>&amp;ToFB2</b></font>         ; }
+    <font color="#ff6060">if</font> (<font color="#ff6060">/</font><font color="#ff40ff"><b>_Ascii</b></font><font color="#ff40ff"><b>\.</b></font><font color="#ff40ff"><b>txt$</b></font><font color="#ff6060">/</font>)            { <font color="#8080ff"><b>&amp;Ascii</b></font>         ; }
+        </pre>
+    </li>
+
+    <li>
+        Делаем вызов темплейта.<br>
+        Было:
+        <pre>
+    <font color="#ff6060">sub</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>Contents</b></font>{<font color="#ff6060">require</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#8080ff"><b>$INC</b></font><font color="#ff40ff"><b>/Contents.htms</b></font><font color="#ff40ff"><b>&quot;</b></font>;}
+    <font color="#ff6060">sub</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>Ascii</b></font>{<font color="#ff6060">require</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#8080ff"><b>$INC</b></font><font color="#ff40ff"><b>/Ascii.htms</b></font><font color="#ff40ff"><b>&quot;</b></font>;}
+        </pre>
+        Стало:
+        <pre>
+    <font color="#ff6060">sub</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>Contents</b></font>{<font color="#ff6060">require</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#8080ff"><b>$INC</b></font><font color="#ff40ff"><b>/Contents.htms</b></font><font color="#ff40ff"><b>&quot;</b></font>;}
+    <font color="#ff6060">sub</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>ToFB2</b></font>{<font color="#ff6060">require</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#8080ff"><b>$INC</b></font><font color="#ff40ff"><b>/fb2.htms</b></font><font color="#ff40ff"><b>&quot;</b></font>;}
+    <font color="#ff6060">sub</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>Ascii</b></font>{<font color="#ff6060">require</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#8080ff"><b>$INC</b></font><font color="#ff40ff"><b>/Ascii.htms</b></font><font color="#ff40ff"><b>&quot;</b></font>;}
+        </pre>
+    </li>
+
+    <li>
+        Добавляем ссылку в конец select'а в функции selectformat:
+        <pre>
+    <font color="#8080ff"><b>&lt;</b></font><font color="#ff6060">OPTION</font><font color="#8080ff"><b> </b></font><font color="#8080ff"><b>VALUE</b></font><font color="#8080ff"><b>=</b></font><font color="#ff40ff"><b>\&quot;_fb2\&quot;</b></font><font color="#8080ff"><b>&gt;</b></font>FictionBook
+        </pre>
+    </li>
+
+    <li>
+        Редиректор ~moshkow/public_html/bin/r/fb2/htms:
+        <pre>
+    <font color="#8080ff"><b>$filename</b></font> = <font color="#8080ff"><b>$PATH_INFO</b></font>;
+    <font color="#8080ff"><b>$filename</b></font> =~ <font color="#ff6060">s/</font><font color="#ff40ff"><b>.</b></font><font color="#ff40ff"><b>fb2$</b></font><font color="#ff6060">//</font>;
+    <font color="#8080ff"><b>$filename</b></font> =~ s-^/--;
+
+    <font color="#ff6060">print</font> (<font color="#ff40ff"><b>&quot;</b></font><font color="#ff40ff"><b>Location: http://starlight/Any2fb2/index.php?libfile=</b></font><font color="#8080ff"><b>$filename</b></font><font color="#ff40ff"><b>\n</b></font><font color="#ff40ff"><b>&quot;</b></font>);
+    <font color="#ff6060">print</font> <font color="#ff40ff"><b>&quot;</b></font><font color="#ff40ff"><b>\r\n\r\n</b></font><font color="#ff40ff"><b>&quot;</b></font>;
+
+    <font color="#ff6060">exit</font> (<font color="#ff40ff"><b>0</b></font>);
+
+    <font color="#ff40ff"><b>1</b></font>;
+        </pre>
+    </li>
+
+    <li>
+        Вуаля!
+        После очистки кэша браузера в выборе формата появляется вариант FictionBook,
+        пересылающий к WEB-конвертору.
+    </li>
+</ol>
+
+<div align=right>
+    Версия: $Id: README.html,v 1.1 2005/02/14 22:42:42 eliterr Exp eliterr $
+</div>
+</html>
