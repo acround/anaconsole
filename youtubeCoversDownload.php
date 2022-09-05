@@ -1,6 +1,7 @@
 <?php
 
 define('QUIT', '\q');
+define('IMAGE_URL', 'https://i3.ytimg.com/vi/');
 
 include_once 'LibraryIncluder.php';
 
@@ -25,7 +26,7 @@ function videoCover($url, $query)
     $imageName = '';
     foreach ($imageNames as $imageNameTmp) {
         $imageName = $imageNameTmp;
-        $videoUrl = 'https://i3.ytimg.com/vi/' . $code . '/' . $imageNameTmp . '.jpg';
+        $videoUrl = IMAGE_URL . $code . '/' . $imageNameTmp . '.jpg';
         $options = [
             CURLOPT_URL => $videoUrl,
             CURLOPT_SSL_VERIFYPEER => false,
@@ -40,7 +41,7 @@ function videoCover($url, $query)
             break;
         }
     }
-//    print_r([$imageName, $videoUrl]);
+
     if ($image) {
         $options = [
             CURLOPT_URL => $url,
@@ -86,12 +87,11 @@ if ((count($argv) > 1) && (($argv[1] == '-h') || ($argv[1] == '--here'))) {
         $outDir = __DIR__;
     }
 }
-//echo $outDir."\n";
 
 do {
     echo "Url (" . QUIT . "):";
     $url = readline();
-    if ($url == QUIT) {
+    if (($url == '') || ($url == QUIT)) {
         break;
     }
 
@@ -113,4 +113,5 @@ do {
     }
     echo "\n";
 } while (true);
+
 echo "Thanks!\n";
