@@ -5,6 +5,7 @@ define('QUIT', '\q');
 include_once 'LibraryIncluder.php';
 
 use analib\Core\System\User;
+use analib\Util\Translit;
 
 LibraryIncluder::includeAnalib();
 
@@ -39,7 +40,7 @@ function videoCover($url, $query)
             break;
         }
     }
-    print_r([$imageName, $videoUrl]);
+//    print_r([$imageName, $videoUrl]);
     if ($image) {
         $options = [
             CURLOPT_URL => $url,
@@ -56,7 +57,7 @@ function videoCover($url, $query)
         $name = isset($matches[1]) ? $matches[1] : $imageName;
 
         if (substr($name, -strlen($titleNameEnd)) == $titleNameEnd) {
-            $name = substr($name, 0, strlen($name) - strlen($titleNameEnd));
+            $name = Translit::clearDenySymbols(substr($name, 0, strlen($name) - strlen($titleNameEnd)));
         }
         echo "OK\n";
         file_put_contents($outDir . DIRECTORY_SEPARATOR . $name . '.jpg', $image);
@@ -70,17 +71,22 @@ function playListCovers($url, $query)
     
 }
 
-$userinfo = User::userInfo();
-$outDir = null;
-$homeDir = $userinfo['dir'];
-$iniFile = 'settings';
-$localDir = $homeDir . DIRECTORY_SEPARATOR . 'share' . DIRECTORY_SEPARATOR . 'youtubeCoversDownload';
-if (file_exists($localDir) && is_dir($localDir) && file_exists($localDir . DIRECTORY_SEPARATOR . $iniFile)) {
-    $outDir = trim(file_get_contents($localDir . DIRECTORY_SEPARATOR . $iniFile));
+if ((count($argv) > 1) && (($argv[1] == '-h') || ($argv[1] == '--here'))) {
+    $outDir = realpath('./');
+} else {
+    $userinfo = User::userInfo();
+    $outDir = null;
+    $homeDir = $userinfo['dir'];
+    $iniFile = 'settings';
+    $localDir = $homeDir . DIRECTORY_SEPARATOR . 'share' . DIRECTORY_SEPARATOR . 'youtubeCoversDownload';
+    if (file_exists($localDir) && is_dir($localDir) && file_exists($localDir . DIRECTORY_SEPARATOR . $iniFile)) {
+        $outDir = trim(file_get_contents($localDir . DIRECTORY_SEPARATOR . $iniFile));
+    }
+    if (empty($outDir)) {
+        $outDir = __DIR__;
+    }
 }
-if (empty($outDir)) {
-    $outDir = __DIR__;
-}
+//echo $outDir."\n";
 
 do {
     echo "Url (" . QUIT . "):";
@@ -99,7 +105,7 @@ do {
                 break;
             case '/playlist':
                 echo "Looks like a playlist. I'll try to get the covers:";
-                videoCover($url, $arr['query']);
+                playListCovers($url, $arr['query']);
                 break;
         }
     } else {
