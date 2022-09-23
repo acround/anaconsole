@@ -1,7 +1,6 @@
 <?php
 
 define('QUIT', '\q');
-define('IMAGE_URL', 'https://i3.ytimg.com/vi/');
 
 include_once 'LibraryIncluder.php';
 
@@ -14,29 +13,43 @@ $imageNames = [
     'maxresdefault',
     'hqdefault',
 ];
+$imageHosts = [
+    'https://i3.ytimg.com/vi/',
+    'http://i3.ytimg.com/vi/',
+];
 $titleNameEnd = ' - YouTube';
 
 function videoCover($url, $query)
 {
     global $imageNames;
+    global $imageHosts;
     global $titleNameEnd;
     global $outDir;
     parse_str($query, $result);
     $code = $result['v'];
     $imageName = '';
-    foreach ($imageNames as $imageNameTmp) {
-        $imageName = $imageNameTmp;
-        $videoUrl = IMAGE_URL . $code . '/' . $imageNameTmp . '.jpg';
+    for ($i = 0; $i < count($imageNames); $i++) {
+        $imageName = $imageNames[$i];
+        $imageHost = $imageHosts[$i];
+        $videoUrl = $imageHost . $code . '/' . $imageName . '.jpg';
         $options = [
             CURLOPT_URL => $videoUrl,
             CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 60,
+            CURLOPT_HEADER => 1,
         ];
         $curl = curl_init();
         curl_setopt_array($curl, $options);
-        $image = curl_exec($curl);
+        $responce = curl_exec($curl);
+        $responceArr = explode("\r\n\r\n", $responce);
+        $headers = explode("\r\n", $responceArr[0]);
+        $image = $responceArr[1];
         curl_close($curl);
+        $codeRet = explode(' ', trim($headers[0]));
+        if ($codeRet[1] == '404') {
+            $image = false;
+        }
         if ($image) {
             break;
         }
