@@ -60,7 +60,7 @@ function videoCover($url, $query)
         if (substr($name, -strlen($titleNameEnd)) == $titleNameEnd) {
             $name = Translit::clearDenySymbols(substr($name, 0, strlen($name) - strlen($titleNameEnd)));
         }
-        echo "OK\n";
+        echo "OK (" . $name . ")\n";
         file_put_contents($outDir . DIRECTORY_SEPARATOR . $name . '.jpg', $image);
     } else {
         echo " Something is wrong...\n";
