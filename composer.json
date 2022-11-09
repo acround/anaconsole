@@ -1,37 +1,39 @@
 {
-    "name": "ana/console-basic",
-    "description": "ANA Basic Console",
-    "keywords": [],
-    "type": "project",
-    "license": "BSD-3-Clause",
-    "support": {
-    },
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=7.1.15",
-        "acround/analib.git": "dev-master"
-    },
-    "require-dev": {
-    },
-    "config": {
-        "preferred-install": "dist",
-	"secure-http": false
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-        ],
-        "post-create-project-cmd": [
-        ]
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:acround/analib.git"
-        }
+  "name": "ana/console-basic",
+  "description": "ANA Basic Console",
+  "keywords": [],
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1.15",
+    "acround/analib.git": "dev-master",
+    "ext-curl": "*",
+    "ext-readline": "*"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http": false
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+    ],
+    "post-create-project-cmd": [
     ]
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:acround/analib.git"
+    }
+  ]
 }
