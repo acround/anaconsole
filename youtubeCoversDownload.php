@@ -121,6 +121,11 @@ do {
                 playListCovers($url, $arr['query']);
                 break;
         }
+    } elseif (isset($arr['host']) && $arr['host'] == 'youtu.be') {
+        $id = trim($arr['path'], '/');
+        $url = 'https://www.youtube.com/watch?v=' . $id;
+        echo "Looks like a video. I'll try to get the cover:";
+        videoCover($url, 'v=' . $id);
     } else {
         echo "Looks like it is not Youtube. Try one more...\n";
     }
