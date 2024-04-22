@@ -82,10 +82,12 @@ function videoCover($url, $query)
 
 function playListCovers($url, $query)
 {
-    
+
 }
 
 if ((count($argv) > 1) && (($argv[1] == '-h') || ($argv[1] == '--here'))) {
+    $outDir = realpath('./');
+} elseif (count($argv) === 1) {
     $outDir = realpath('./');
 } else {
     $userinfo = User::userInfo();
