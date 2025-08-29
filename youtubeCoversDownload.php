@@ -2,12 +2,12 @@
 
 define('QUIT', '\q');
 
-include_once 'LibraryIncluder.php';
+//include_once 'LibraryIncluder.php';
 
 use analib\Core\System\User;
 use analib\Util\Translit;
 
-LibraryIncluder::includeAnalib();
+//LibraryIncluder::includeAnalib();
 
 $imageNames = [
     'maxresdefault',

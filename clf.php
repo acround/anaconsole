@@ -1,55 +1,58 @@
 <?php
 
 $denyNames    = [
-    'BOOMINFO.ORG'           => 'BOOMINFO.ORG',
-    'Boominfo.ORG'           => 'Boominfo.ORG',
-    'BOOMINFO.RU'            => 'BOOMINFO.RU',
-    '@coursenav'             => '@coursenav',
-    'Eground.pro'            => 'Eground.pro',
-    'Geekbrains'             => 'Geekbrains',
-    'infobiza.net'           => 'infobiza.net',
-    'Infosklad.org'          => 'Infosklad.org',
-    'InfoViru$.BiZ'          => 'InfoViru$.BiZ',
-    'InfoViruS.BiiZ'         => 'InfoViruS.BiiZ',
-    'infoVirus.BiZ'          => 'infoVirus.BiZ',
-    'infoVirus.Biz'          => 'infoVirus.Biz',
-    'InfoViruS.BiZ'          => 'InfoViruS.BiZ',
-    'izibizi'                => 'izibizi',
-    'KURSOMAN'               => 'KURSOMAN',
-    'megasliv.biz'           => 'megasliv.biz',
-    'MEGASLIV.BIZ'           => 'MEGASLIV.BIZ',
-    'Megasliv'               => 'Megasliv',
-    'no-reply@slifki.info'   => 'slifki.info',
-    'openssource.biz'        => 'openssource.biz',
-    '@PumpTheMind'           => '@PumpTheMind',
-    'sharewood.band'         => 'sharewood.band',
-    'sharewoodbiz.com'       => 'sharewoodbiz.com',
-    'sharewood.biz'          => 'sharewood.biz',
-    'sharewood.wtf'          => 'sharewood.wtf',
-    '@sharksclub'            => '@sharksclub',
-    'slifki.info'            => 'slifki.info',
-    'slivoman.com'           => 'slivoman.com',
-    '@slivoman'              => '@slivoman',
-    'SLIV.ONE'               => 'SLIV.ONE',
-    '@Sliv\'Project'         => '@Sliv\'Project',
-    'slivysklad.com'         => 'slivysklad.com',
-    '@slivytg'               => '@slivytg',
-    'sliwbl.biz'             => 'sliwbl.biz',
-    'supersliv.biz'          => 'supersliv.biz',
-    'SuperSliv.biz'          => 'SuperSliv.biz',
-    'SuperSliv.BiZ'          => 'SuperSliv.BiZ',
-    'SuperSliv.Biz'          => 'SuperSliv.Biz',
-    'SW.BAND'                => 'SW.BAND',
-    'TexTerra'               => 'TexTerra',
-    '@Tlgrm_University'      => '@Tlgrm_University',
-    'TU'                     => 'TU',
-    'www.sharewood.biz'      => 'www.sharewood.biz',
-    'www.slifki.info'        => 'www.slifki.info',
-    'WWW.SLIFKI.INFO'        => 'WWW.SLIFKI.INFO',
-    'Биржа Знаний'           => 'Биржа Знаний',
-    'Отборные Сливы'         => 'Отборные Сливы',
-    'отборные сливы'         => 'отборные сливы',
-    'Скачано с boominfo.org' => 'Скачано с boominfo.org',
+    'BOOMINFO.ORG'             => 'BOOMINFO.ORG',
+    'Boominfo.ORG'             => 'Boominfo.ORG',
+    'BOOMINFO.RU'              => 'BOOMINFO.RU',
+    '@coursenav'               => '@coursenav',
+    'Eground.pro'              => 'Eground.pro',
+    'Geekbrains'               => 'Geekbrains',
+    'infobiza.net'             => 'infobiza.net',
+    'Infosklad.org'            => 'Infosklad.org',
+    'InfoViru$.BiZ'            => 'InfoViru$.BiZ',
+    'InfoViruS.BiiZ'           => 'InfoViruS.BiiZ',
+    'infoVirus.BiZ'            => 'infoVirus.BiZ',
+    'infoVirus.Biz'            => 'infoVirus.Biz',
+    'InfoViruS.BiZ'            => 'InfoViruS.BiZ',
+    'izibizi'                  => 'izibizi',
+    'KURSOMAN'                 => 'KURSOMAN',
+    'megasliv.biz'             => 'megasliv.biz',
+    'MEGASLIV.BIZ'             => 'MEGASLIV.BIZ',
+    'Megasliv'                 => 'Megasliv',
+    'no-reply@slifki.info'     => 'slifki.info',
+    'openssource.biz'          => 'openssource.biz',
+    '@PumpTheMind'             => '@PumpTheMind',
+    'sharewood.band'           => 'sharewood.band',
+    'sharewoodbiz.com'         => 'sharewoodbiz.com',
+    'sharewood.biz'            => 'sharewood.biz',
+    'sharewood.wtf'            => 'sharewood.wtf',
+    'sharewood-zerkalo.online' => 'sharewood-zerkalo.online',
+    '@sharksclub'              => '@sharksclub',
+    'SilaSliva.biz'            => 'SilaSliva.biz',
+    'slifki.info'              => 'slifki.info',
+    'slivoman.com'             => 'slivoman.com',
+    '@slivoman'                => '@slivoman',
+    'SLIV.ONE'                 => 'SLIV.ONE',
+    '@Sliv\'Project'           => '@Sliv\'Project',
+    'slivysklad.com'           => 'slivysklad.com',
+    '@slivytg'                 => '@slivytg',
+    'sliwbl.biz'               => 'sliwbl.biz',
+    'SSL.BAND'                 => 'SSL.BAND',
+    'supersliv.biz'            => 'supersliv.biz',
+    'SuperSliv.biz'            => 'SuperSliv.biz',
+    'SuperSliv.BiZ'            => 'SuperSliv.BiZ',
+    'SuperSliv.Biz'            => 'SuperSliv.Biz',
+    'SW.BAND'                  => 'SW.BAND',
+    'TexTerra'                 => 'TexTerra',
+    '@Tlgrm_University'        => '@Tlgrm_University',
+    'TU'                       => 'TU',
+    'www.sharewood.biz'        => 'www.sharewood.biz',
+    'www.slifki.info'          => 'www.slifki.info',
+    'WWW.SLIFKI.INFO'          => 'WWW.SLIFKI.INFO',
+    'Биржа Знаний'             => 'Биржа Знаний',
+    'Отборные Сливы'           => 'Отборные Сливы',
+    'отборные сливы'           => 'отборные сливы',
+    'Скачано с boominfo.org'   => 'Скачано с boominfo.org',
 ];
 $denyNames2   = [
     'www.sharewood.biz -' => 'www.sharewood.biz -',
@@ -105,14 +108,15 @@ function clearFilesInDir($dirPath)
             if (array_search($newFile, $names) !== FALSE) {
                 unlink($filename);
                 echo $filename . " - has been removed because of its name\n";
-            }
-            $fileExt = explode('.', $file);
-            $ext     = strtolower(end($fileExt));
-            if (isset($hashes[$ext])) {
-                $md5 = md5_file($dirPath . DIRECTORY_SEPARATOR . $newFile);
-                if (array_search($md5, $hashes[$ext]) !== FALSE) {
-                    unlink($filename);
-                    echo $filename . " - has been removed because of its hash\n";
+            } else {
+                $fileExt = explode('.', $file);
+                $ext     = strtolower(end($fileExt));
+                if (isset($hashes[$ext])) {
+                    $md5 = md5_file($dirPath . DIRECTORY_SEPARATOR . $newFile);
+                    if (array_search($md5, $hashes[$ext]) !== FALSE) {
+                        unlink($filename);
+                        echo $filename . " - has been removed because of its hash\n";
+                    }
                 }
             }
         }
